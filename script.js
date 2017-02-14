@@ -23,13 +23,13 @@ $(".hiddenImg").hide();
 
     $("li").click(
         function() {
-            $(this).css("background-color", "#000");
+            $(this).css("background-color", "#909090");
             $(this).css("color", "#fff");
             $(this).text(">CLICKED!!");
             $(".hiddenImg").toggle();
         }).on("mouseout", function() {
-        $(this).css("background-color", "#fff");
-        $(this).css("color", "#000");
+    //    $(this).css("background-color", "#fff");
+        $(this).css("color", "#fff");
         $(this).text();
     });
 });
