@@ -2,7 +2,7 @@ $(document).ready(function() {
     var $body = $("body");
 
 $(".hiddenImg").attr("src","gif2.gif");
-$(".hiddenImg").hide();
+// $(".hiddenImg").hide();
 // $(".hiddenImg").css("height","300px");
 // $(".hiddenImg").css("width","300px");
 
@@ -25,9 +25,14 @@ $(".hiddenImg").hide();
         function() {
             $(this).css("background-color", "#909090");
             $(this).css("color", "#fff");
+            var gifNumber = $(this).text().split(" ");
             $(this).text(">CLICKED!!");
-            $(".hiddenImg").toggle();
+            $(".hiddenImg").attr("src","gif" + gifNumber[1] + ".gif");
+            console.log(gifNumber[1]);
+            // $(".hiddenImg").toggle();
         }).on("mouseout", function() {
+          $(".hiddenImg").attr("src","gif2.gif");
+
     //    $(this).css("background-color", "#fff");
         $(this).css("color", "#fff");
         $(this).text();
